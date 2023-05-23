@@ -4,11 +4,33 @@ import Box from "@mui/material/Box";
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
+import LinearProgress from "@mui/material/LinearProgress";
+import Alert from '@mui/material/Alert';
 
 function App() {
   return (
-    <Box >
-      <Box sx={{ m: 8, p: 2, border: "1px dashed grey"}}>
+    <Box>
+      <Box sx={{ m: 8, p: 2, border: "1px dashed grey" }}>
+        <Stack spacing={2}>
+          <Alert severity="error">This is an error alert — check it out!</Alert>
+          <Alert severity="warning">
+            This is a warning alert — check it out!
+          </Alert>
+          <Alert severity="info">This is an info alert — check it out!</Alert>
+          <Alert severity="success">
+            This is a success alert — check it out!
+          </Alert>
+        </Stack>
+      </Box>
+      <Box sx={{ m: 8, p: 2, border: "1px dashed grey" }}>
+        <Stack spacing={2}>
+          <LinearProgress />
+          <LinearProgress color="secondary" />
+          <LinearProgress color="success" />
+          <LinearProgress color="inherit" />
+        </Stack>
+      </Box>
+      <Box sx={{ m: 8, p: 2, border: "1px dashed grey" }}>
         <Stack direction="row" useFlexGap flexWrap="wrap" spacing={2}>
           <Button variant="text">Text</Button>
           <Button href="#text-buttons">Link</Button>
