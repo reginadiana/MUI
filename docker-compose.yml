@@ -3,7 +3,7 @@ services:
   mui_app:
     build: .
     ports:
-      - 3000:3000
+      - 5000:5000
     volumes:
       - .:/app
       - "/app/node_modules"
