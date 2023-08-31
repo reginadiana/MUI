@@ -1,9 +1,0 @@
-version: "3.5"
-services:
-  mui_app:
-    build: .
-    ports:
-      - 5000:5000
-    volumes:
-      - .:/app
-      - "/app/node_modules"
