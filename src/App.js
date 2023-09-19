@@ -1,38 +1,43 @@
-import { useState } from "react";
-import "./App.css";
+import { useState } from 'react'
 
-import Alert from "@mui/material/Alert";
-import AlertTitle from "@mui/material/AlertTitle";
-import Avatar from "@mui/material/Avatar";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import CloseIcon from "@mui/icons-material/Close";
-import CheckIcon from "@mui/icons-material/Check";
-import Collapse from "@mui/material/Collapse";
-import Grid from "@mui/material/Grid";
-import IconButton from "@mui/material/IconButton";
-import LinearProgress from "@mui/material/LinearProgress";
-import Stack from "@mui/material/Stack";
-import Typography from "@mui/material/Typography";
+import {
+  Alert,
+  AlertTitle,
+  Avatar,
+  Box,
+  Button,
+  Collapse,
+  Grid,
+  IconButton,
+  LinearProgress,
+  Typography,
+  Stack,
+} from '@mui/material'
+
+import CloseIcon from '@mui/icons-material/Close'
+import CheckIcon from '@mui/icons-material/Check'
 
 function App() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(true)
 
   return (
     <Box>
-      <Box sx={{ m: 8, p: 2, border: "1px dashed grey" }}>
+      <Box sx={{ m: 8, p: 2, border: '1px dashed grey' }}>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
           <Grid item xs={6}>
             <Alert severity="success">Mensagem de sucesso (padrão)</Alert>
           </Grid>
 
           <Grid item xs={6}>
-            <Alert variant="outlined" severity="error">Com variant outlined</Alert>
+            <Alert variant="outlined" severity="error">
+              Com variant outlined
+            </Alert>
           </Grid>
 
-
           <Grid item xs={6}>
-            <Alert variant="filled" severity="warning">Com variant filled</Alert>
+            <Alert variant="filled" severity="warning">
+              Com variant filled
+            </Alert>
           </Grid>
 
           <Grid item xs={6}>
@@ -48,7 +53,7 @@ function App() {
           </Grid>
 
           <Grid item xs={6}>
-            <Alert onClose={() => alert("onClose callback was trigged")}>
+            <Alert onClose={() => alert('onClose callback was trigged')}>
               Click there!
             </Alert>
           </Grid>
@@ -77,7 +82,7 @@ function App() {
               action={
                 <Button
                   onClick={() =>
-                    alert("onClick callback was trigged by action button alert")
+                    alert('onClick callback was trigged by action button alert')
                   }
                   color="info"
                   size="large"
@@ -96,7 +101,7 @@ function App() {
               disabled={open}
               variant="outlined"
               onClick={() => {
-                setOpen(true);
+                setOpen(true)
               }}
             >
               Re-open
@@ -130,14 +135,14 @@ function App() {
 
           <Grid item xs={6}>
             <Alert severity="error">
-              <AlertTitle>Titulo</AlertTitle>Mensagem -{" "}
+              <AlertTitle>Titulo</AlertTitle>Mensagem -{' '}
               <strong>importante!</strong>
             </Alert>
           </Grid>
         </Grid>
       </Box>
 
-      <Box sx={{ m: 8, p: 2, border: "1px dashed grey" }}>
+      <Box sx={{ m: 8, p: 2, border: '1px dashed grey' }}>
         <Stack spacing={2}>
           <LinearProgress />
           <LinearProgress color="secondary" />
@@ -146,13 +151,13 @@ function App() {
         </Stack>
       </Box>
 
-      <Box sx={{ m: 8, p: 2, border: "1px dashed grey" }}>
+      <Box sx={{ m: 8, p: 2, border: '1px dashed grey' }}>
         <Stack direction="row" useFlexGap flexWrap="wrap" spacing={2}>
           <Button variant="text">Text</Button>
           <Button href="#text-buttons">Link</Button>
           <Button
             onClick={() => {
-              alert("onClick triggered");
+              alert('onClick triggered')
             }}
           >
             Click me
@@ -180,7 +185,7 @@ function App() {
         </Stack>
       </Box>
 
-      <Box sx={{ m: 8, p: 2, border: "1px dashed grey" }}>
+      <Box sx={{ m: 8, p: 2, border: '1px dashed grey' }}>
         <Stack direction="row" spacing={2}>
           <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
           <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
@@ -188,7 +193,7 @@ function App() {
         </Stack>
       </Box>
 
-      <Box sx={{ m: 8, p: 2, border: "1px dashed grey" }}>
+      <Box sx={{ m: 8, p: 2, border: '1px dashed grey' }}>
         <Typography variant="h1">Typography 1</Typography>
 
         <Typography variant="h2" gutterBottom>
@@ -252,7 +257,7 @@ function App() {
         </Typography>
       </Box>
     </Box>
-  );
+  )
 }
 
-export default App;
+export default App
