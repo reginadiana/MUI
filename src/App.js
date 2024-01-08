@@ -17,11 +17,26 @@ import {
 import CloseIcon from '@mui/icons-material/Close'
 import CheckIcon from '@mui/icons-material/Check'
 
+import { DataGrid } from '@mui/x-data-grid';
+
+const rows = [
+  { id: 1, col1: 'Hello', col2: 'World' },
+  { id: 2, col1: 'DataGridPro', col2: 'is Awesome' },
+  { id: 3, col1: 'MUI', col2: 'is Amazing' },
+];
+
+const columns = [
+  { field: 'col1', headerName: 'Column 1', width: 150 },
+  { field: 'col2', headerName: 'Column 2', width: 150 },
+];
+
 function App() {
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(true);
 
   return (
     <Box>
+      <DataGrid rows={rows} columns={columns} />
+      
       <Box sx={{ m: 8, p: 2, border: '1px dashed grey' }}>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
           <Grid item xs={6}>
